@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    struct student{
+        char name[30];
+        int age;
+        float cgpa;
+    };
+
+    struct student s[20];
+    int n,a,i;
+    printf("How many students: ");
+    scanf("%d",&n);
+    for(a=0; a<n; a++){
+        printf("Input number %d students name: ",a+1);
+        scanf("%s",s[a].name);
+        printf("Input number %d students age: ",a+1);
+        scanf("%d",&s[a].age);
+        printf("Input number %d students cgpa: ",a+1);
+        scanf("%f",&s[a].cgpa);
+    }
+    for(i=0; i<n; i++){
+        if(s[i].cgpa>=3.75){
+            printf("%s\n",s[i].name);
+        }
+    }
+}
